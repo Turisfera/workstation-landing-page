@@ -231,6 +231,99 @@ header {
     display: block;
 }
 
+/* About Us Section */
+
+.about-us-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background-color: #00606C;
+    width: 500px;
+}
+
+.section-title h2::before {
+    right: 100%;
+    margin-right: 60px;
+}
+
+.section-title h2::after {
+    left: 100%;
+    margin-left: 60px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.mission-container,
+.vision-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.mission-container {
+    flex-direction: row-reverse;
+}
+
+.mission-img,
+.vision-img {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.mission-img img,
+.vision-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.mission-text,
+.vision-text {
+    flex: 3 0 60px;
+}
+
+.mission-text h3,
+.vision-text h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #019392;
+}
+
+.mission-text p,
+.vision-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: black;
+}
+
 
 /* Responsive */
 @media (max-width: 1000px) {
@@ -280,6 +373,29 @@ header {
 
     .description-section {
         padding: 20px;
+    }
+
+    /* About Section */
+
+    .about-us-section {
+        padding: 40px 20px;
+    }
+    
+    .section-title h2::before,
+    .section-title h2::after {
+        width: 100%;
+    }
+    
+    .mission-container,
+    .vision-container {
+        flex-direction: column;
+    }
+    
+    .mission-img,
+    .vision-img,
+    .mission-text,
+    .vision-text {
+        width: 100%;
     }
 
 }
