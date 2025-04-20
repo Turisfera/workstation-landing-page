@@ -395,7 +395,8 @@ header {
     .vision-img,
     .mission-text,
     .vision-text {
-        width: 100%;
+        width: 80%;
+        flex: none;
     }
 
 }
