@@ -1,0 +1,45 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      const errors = [];
+      const fullName = document.getElementById("name").value.trim();
+      const phone    = document.getElementById("phone").value.trim();
+      const email    = document.getElementById("email").value.trim();
+      const userTypeEl = document.querySelector('input[name="userType"]:checked');
+      const userType = userTypeEl ? userTypeEl.value : "";
+      const message  = document.getElementById("message").value.trim(); 
+      // Name: required, letters and3–50 chars
+      if (!fullName) {
+        errors.push("❌ Name is required.");
+      } else if (!/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{3,50}$/.test(fullName)) {
+        errors.push("❌ Name must be 3–50 letters and spaces only.");
+      }
+      // Phone: required, format +51 +9 numbers
+      if (!phone) {
+        errors.push("❌ Phone number is required.");
+      } else if (!/^\+51\s?\d{9}$/.test(phone)) {
+        errors.push("❌ Phone must be in format +51 987654321.");
+      } 
+      //Email required, valid format
+      if (!email) {
+        errors.push("❌ Email is required.");
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors.push("❌ Enter a valid email address.");
+      }  
+      // User type: required
+      if (!userType) {
+        errors.push("❌ Please select a user type.");
+      }
+      // Message: requred, max 500 chars
+      if (!message) {
+        errors.push("❌ Message is required.");
+      } else if (message.length > 500) {
+        errors.push("❌ Message cannot exceed 500 characters.");
+      }
+      if (errors.length > 0) {
+        e.preventDefault();
+        alert("Please fix the following errors:\n\n" + errors.join("\n"));
+      }
+    });
+  });
+  
