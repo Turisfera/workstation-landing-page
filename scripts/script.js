@@ -41,5 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please fix the following errors:\n\n" + errors.join("\n"));
       }
     });
+
+      // FAQ Logic
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+
   });
   
