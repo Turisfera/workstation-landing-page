@@ -590,18 +590,6 @@ header {
   .social-icons a:hover {
     color: #fff !important;
   }
-
-  /* Footer */
-  .footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 60px 0;
-    margin-top: 40px;
-  }
-  .footer p {
-    color: #ccc;
-    font-size: 14px;
-  }
   
   @media (max-width: 768px) {
     .contact-container {
@@ -730,4 +718,36 @@ header {
 
 .benefit-card.border-green {
   border: 2px solid #019392;
+}
+
+/* Footer */
+.footer {
+  background-color: #2C2C2C;
+  color: white;
+  padding: 3% 0;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.footer-name {
+  font-size: 160%;
+  padding: 1%;
+}
+
+.footer-description {
+  padding: 1%;
+}
+
+.footer-image img {
+  margin: 3% 5%;
+  text-align: center;
+  align-items: center;
+  width: 4%;
+  height: 4%;
+  display: inline-block;
+  position: relative;
+}
+
+.footer p{
+  padding: 1.5%;
 }
