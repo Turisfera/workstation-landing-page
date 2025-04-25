@@ -520,6 +520,7 @@ header {
   }
   .contact-form button:hover {
     background-color: #017f75;
+    width: 100%;
   }
   .user-type-group .section-label {
     display: block;
@@ -555,7 +556,7 @@ header {
     background-color: #019392;
     color: #fff;
     border-radius: 16px;
-    padding: 220px 60px;
+    padding: 25px 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -564,7 +565,7 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .info-item i {
     font-size: 20px;
