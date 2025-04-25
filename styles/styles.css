@@ -520,6 +520,7 @@ header {
   }
   .contact-form button:hover {
     background-color: #017f75;
+    width: 100%;
   }
   .user-type-group .section-label {
     display: block;
@@ -555,7 +556,7 @@ header {
     background-color: #019392;
     color: #fff;
     border-radius: 16px;
-    padding: 220px 60px;
+    padding: 25px 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -564,7 +565,7 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 16px;
+    font-size: 14px;
   }
   .info-item i {
     font-size: 20px;
@@ -607,49 +608,126 @@ header {
       flex-direction: column;
       gap: 30px;
     }
-}
-  
-  .contact-form, 
-  .contact-info {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+  }
+
+  /*FAq */
+  .faq-container {
+    max-width: 800px;
+    margin: auto;
   }
   
-  .contact-form h2 {
+  .faq-title,
+  .section-title h2 {
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
   }
   
-  .info-card {
-    padding: 30px 20px;
+  .faq-item {
+    background: #fff;
+    border: 2px solid #00797b;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-header {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   
-  .form-group.inline {
-    flex-direction: column;
-    align-items: flex-start;
+  .faq-number {
+    background: #00797b;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
   }
   
-  .form-group.inline label {
-    margin-bottom: 8px;
+  .faq-question {
+    font-weight: bold;
+    flex-grow: 1;
   }
   
-  .user-type-group .inline-options {
-    flex-direction: column;
-    gap: 10px;
+  .faq-icon {
+    font-size: 24px;
+    color: #00797b;
+    transition: transform 0.3s ease;
   }
   
-  .contact-form button {
+  .faq-answer {
+    margin-top: 10px;
+    color: #333;
+    display: none;
+    font-size: 14px;
+  }
+  
+  .faq-item.active .faq-answer {
     display: block;
-    margin: 12px auto 0;
   }
+  
+  .faq-item.active .faq-icon {
+    transform: rotate(45deg);
+  }
+
+/* Benefits Section */
+.benefits-section {
+  padding: 100px 20px;
+  background-color: #f8f9fb;
 }
 
-@media (max-width: 480px) {
-  .contact-form button {
-    width: 100%;
-  }
-  
-  .info-item {
-    justify-content: center;
-  }
+.benefit-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.benefit-card {
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  background-color: #ffffff;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+}
+
+.benefit-card i {
+  font-size: 30px;
+  color: #00606C;
+  margin-bottom: 15px;
+}
+
+.benefit-card h4 {
+  font-size: 18px;
+  color: #00606C;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Opcionales */
+.benefit-card.bg-blue {
+  background-color: #C1EFFF;
+}
+
+.benefit-card.border-green {
+  border: 2px solid #019392;
+}
