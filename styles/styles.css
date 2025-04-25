@@ -559,9 +559,9 @@ header {
     background-color: #019392;
     color: #fff;
     border-radius: 16px;
-    padding: 25px 15px;
     display: flex;
     flex-direction: column;
+    padding: 220px 60px; 
     gap: 20px;
   }
   .info-item {
