@@ -523,7 +523,6 @@ header {
   }
   .contact-form button:hover {
     background-color: #017f75;
-    width: 100%;
   }
   .user-type-group .section-label {
     display: block;
@@ -735,4 +734,9 @@ header {
   border: 2px solid #019392;
 }
 
+@media (max-width: 480px) {
+  .contact-form button {
+    width: 100%;
+  }
+}
   
