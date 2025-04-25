@@ -38,6 +38,11 @@ header {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
 }
 
+.nav-white {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
 .menu { 
     display: flex;
     align-items: center;

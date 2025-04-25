@@ -51,4 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   });
-  
+
+
+  //Logica del navbar
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.nav-bar');
+    const links = document.querySelectorAll('.nav-menu ul li a');
+    const logoText = document.querySelector('.logo-text');
+    const loginButtons = document.querySelectorAll('.register-login a');
+
+    if (window.scrollY > 50) {
+        nav.classList.add('nav-white');
+        logoText.style.color = "#00606C";
+        links.forEach(link => link.style.color = "#00606C");
+        loginButtons.forEach(btn => btn.style.border = "1px solid #00606C");
+    } else {
+        nav.classList.remove('nav-white');
+        logoText.style.color = "#FFF";
+        links.forEach(link => link.style.color = "#FFF");
+        loginButtons.forEach(btn => btn.style.border = "none");
+    }
+});
