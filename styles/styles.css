@@ -456,13 +456,14 @@ header {
 }
 /* Contact Section */
 .contact-section {
-    padding: 60px 0;
+    padding: 40px 20;
   }
   .contact-container {
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
   }
   
   /* Form */
