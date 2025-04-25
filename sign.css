@@ -1,1 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr; 
+    height: 100vh;
+}
+
+.imagen-izquierda {
+    display: none; 
+}
+
+.imagen-izquierda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido-derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.header {
+    width: 100%;
+    word-break: break-word;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.frase {
+    font-size: 0.8em;
+    color: #b0b1b1;
+    margin-left: 8px;
+}
+
+form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #333;
+    margin-top: 11%;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%; 
+    height: 38px;
+}
+
+.terms-checkbox {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.btn-signup {
+    width: 100%;
+    padding: 14px;
+    background-color: #717377b6;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: #171616;
+}
+
+.separator-line {
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.separator-text {
+    padding: 0 10px;
+    font-size: 0.9rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.btn-google, .btn-facebook, .btn-apple {
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .contenedor-principal {
+        grid-template-columns: 50% 50%; 
+    }
+
+    .imagen-izquierda {
+        display: block; 
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    form {
+        max-width: 400px;
+    }
+}
 
