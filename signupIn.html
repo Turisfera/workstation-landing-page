@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="imagen-izquierda">
+            <img src="img/montaña.jpg" alt="Paisaje de montaña">
+        </div>
+        
+        <div class="contenido-derecha">
+            <header class="header">
+                <h2 class="title">Get Started Now</h2>
+                <p class="frase">  Create a free account or log in  </p>
+            </header>
 
+            <form class="form-registro" id="signupForm">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter email address" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="terms-checkbox">
+                    <label>
+                        <input type="checkbox" name="agree-terms" class="checkbox-square">
+                        <span>by proceeding, you agree to the <a href="Terms of Service.html" target="_blank">Terms of Service</a> and <a href="Privacy Policy.html" target="_blank">Privacy Policy</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+
+                <div class="separator">
+                    <span class="separator-line"></span>
+                    <span class="separator-text">Or</span>
+                    <span class="separator-line"></span>
+                </div>
+
+                <div class="social-buttons">
+                    <button class="btn-google">
+                        <img src="img/google.png" alt="Google" class="social-icon">
+                    </button>
+                    <button class="btn-facebook">
+                        <img src="img/facebook.png" alt="Facebook" class="social-icon">
+                    </button>
+                    <button class="btn-apple">
+                        <img src="img/apple.png" alt="Apple" class="social-icon">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('signupForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const checkbox = document.querySelector('input[name="agree-terms"]');
+            const submitButton = document.querySelector('.btn-signup');
+            
+            submitButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Detiene el envío del formulario
+                
+                let isValid = true;
+                let errorMessage = "Please complete the form with valid information:";
+                
+                if (nameInput.value.trim() === '') {
+                    markAsInvalid(nameInput);
+                    errorMessage += "\n- Name is required";
+                    isValid = false;
+                } else {
+                    markAsValid(nameInput);
+                }
+                
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value.trim())) {
+                    markAsInvalid(emailInput);
+                    errorMessage += "\n- Valid email address is required";
+                    isValid = false;
+                } else {
+                    markAsValid(emailInput);
+                }
+                
+                if (passwordInput.value.length < 8) {
+                    markAsInvalid(passwordInput);
+                    errorMessage += "\n- Password must be at least 8 characters";
+                    isValid = false;
+                } else {
+                    markAsValid(passwordInput);
+                }
+                
+                if (!checkbox.checked) {
+                    errorMessage += "\n- You must agree to the Terms of Service";
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    showFormError(errorMessage);
+                } else {
+                    alert("Form submitted successfully!");
+                    form.submit();
+                }
+            });
+            
+            function markAsInvalid(element) {
+                element.style.borderColor = 'red';
+            }
+            
+            function markAsValid(element) {
+                element.style.borderColor = '#ddd';
+            }
+            
+            function showFormError(message) {
+                let errorContainer = document.querySelector('.form-error-container');
+                
+                if (!errorContainer) {
+                    errorContainer = document.createElement('div');
+                    errorContainer.className = 'form-error-container';
+                    errorContainer.style.backgroundColor = '#ffebee';
+                    errorContainer.style.color = '#d32f2f';
+                    errorContainer.style.padding = '10px';
+                    errorContainer.style.borderRadius = '4px';
+                    errorContainer.style.marginBottom = '15px';
+                    errorContainer.style.fontSize = '14px';
+                    
+                    submitButton.parentNode.insertBefore(errorContainer, submitButton);
+                }
+                
+                errorContainer.innerHTML = message.replace(/\n/g, '<br>');
+                
+                errorContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    </script>
+</body>
+
+</html>
