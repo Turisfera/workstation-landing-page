@@ -512,7 +512,7 @@ header {
     border-color: #019392;
   }
   .contact-form button {
-    margin-top: 12px;
+    margin: 12px auto 0;
     background-color: #019392;
     display: block;
     color: #fff;
