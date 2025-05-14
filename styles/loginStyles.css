@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* Estilos generales */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
   
-/* Contenedor del formulario */
+
 .login-container {
   width: 50%;
   height: 100%;
@@ -30,7 +30,7 @@ form {
   max-width: 400px;
 }
   
-/* Encabezado del login */
+
 .login-header {
   text-align: center;
   margin-bottom: 30px;
@@ -48,7 +48,7 @@ form {
   font-size: 16px;
 }
   
-/* Formulario */
+
 .information-container {
   margin-bottom: 20px;
 }
@@ -104,7 +104,7 @@ input[type="submit"] {
   font-weight: bold;
 }
   
-/* Línea */
+
 .other-options {
   text-align: center;
   margin: 20px 0;
@@ -132,7 +132,7 @@ input[type="submit"] {
   margin-left: 40px;
 }
   
-/* Opciones de inicio */
+
 .options-container {
   display: flex;
   justify-content: center;
@@ -149,7 +149,7 @@ input[type="submit"] {
   cursor: pointer;
 }
   
-/* Crear nueva cuenta */
+
 .newUser-container {
   display: flex;
   justify-content: center;
@@ -170,7 +170,7 @@ input[type="submit"] {
   font-size: 14px;
 }
   
-/* Contenedor de la imagen */
+
 .image-container {
   width: 50%;
   height: 100%;
