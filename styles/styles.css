@@ -790,3 +790,91 @@ header {
 .footer p{
   padding: 1.5%;
 }
+@media (max-width: 768px) {
+
+  .header-content {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: 32px;
+  }
+
+  .header-content h2 {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .description-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .description-text, .description-img {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .description-text h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .description-text p,
+  .description-list li p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .menu .nav-menu {
+    z-index: 999;
+  }
+
+  .menu label {
+    display: block;
+  }
+
+  .menu .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-content {
+    padding: 0 10px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .section-title h2::before,
+  .section-title h2::after {
+    display: none;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .faq-title {
+    font-size: 20px;
+  }
+
+  .footer-image img {
+    width: 10%;
+    height: auto;
+  }
+  header {
+    padding: 8px 0px; /* Reduce el alto */
+  }
+
+}
